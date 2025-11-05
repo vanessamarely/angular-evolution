@@ -1,6 +1,53 @@
-# CookiesGeminiChat
+# Cookies Gemini Chat
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 20.3.7.
+## 🚨 CONFIGURACIÓN INICIAL REQUERIDA
+
+Antes de ejecutar el proyecto, debes configurar tu API key de Gemini:
+
+### 1. Configurar archivos de entorno
+
+Copia los archivos template y agrega tu API key:
+
+```bash
+# Copiar templates
+cp src/environments/environment.template.ts src/environments/environment.ts
+cp src/environments/environment.prod.template.ts src/environments/environment.prod.ts
+cp src/app/config/api.config.template.ts src/app/config/api.config.ts
+
+# O crea el archivo .env en la raíz del proyecto
+echo "VITE_GEMINI_API_KEY=tu-api-key-aqui" > .env
+```
+
+### 2. Editar los archivos copiados
+
+Reemplaza `YOUR_GEMINI_API_KEY_HERE` con tu API key real de Gemini AI.
+
+### 3. Ejecutar el proyecto
+
+```bash
+npm install
+npm start
+```
+
+## 🚀 Deployment
+
+### Para Vercel
+1. Configurar variable de entorno: `VITE_GEMINI_API_KEY`
+2. Hacer deploy
+
+### Para GitHub Pages
+1. Configurar secret: `VITE_GEMINI_API_KEY` 
+2. Usar GitHub Actions (ver DEPLOYMENT.md)
+
+### Para Netlify
+1. Configurar variable de entorno: `VITE_GEMINI_API_KEY`
+2. Hacer deploy
+
+## ⚠️ Seguridad
+
+- ❌ NUNCA commitees archivos con API keys
+- ✅ Usa variables de entorno para production
+- ✅ Los archivos `*.template.ts` son seguros para versionar
 
 ## Development server
 
