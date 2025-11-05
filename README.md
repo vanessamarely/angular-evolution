@@ -454,6 +454,13 @@ jobs:
 - ✅ Usa variables de entorno para production
 - ✅ Los archivos `.env` están en `.gitignore`
 - ✅ Usa secrets en GitHub/Vercel/Netlify
+- 🚨 **IMPORTANTE**: Si accidentalmente expones un API key, regenera una nueva inmediatamente
+
+### 🔄 Si tu API key fue expuesta:
+1. Ve a [Google AI Studio](https://makersuite.google.com/app/apikey)
+2. Elimina la API key comprometida
+3. Genera una nueva API key
+4. Actualiza todas tus variables de entorno con la nueva key
 
 ## 🎯 Conceptos Aprendidos
 
