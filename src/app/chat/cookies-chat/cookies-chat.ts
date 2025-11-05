@@ -2,7 +2,6 @@ import { Component, signal } from '@angular/core';
 import { ReactiveFormsModule, FormControl, Validators } from '@angular/forms';
 import { CommonModule } from '@angular/common';
 import { GoogleGenerativeAI, HarmBlockThreshold, HarmCategory } from '@google/generative-ai';
-import { environment } from './../../../environments/environment';
 
 interface ChatMessage {
   parts: string;
@@ -16,7 +15,7 @@ interface ChatMessage {
   styleUrl: './cookies-chat.css',
 })
 export class CookiesChat {
-  API_KEY = environment.API_KEY;
+  API_KEY = import.meta.env.NG_APP_GEMINI_API_KEY;
 
   private genAI: GoogleGenerativeAI;
   private model: any; // GenerativeModel
