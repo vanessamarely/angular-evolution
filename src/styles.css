@@ -1,1 +1,108 @@
 /* You can add global styles to this file, and also import other style files */
+:host {
+    --bright-blue: oklch(51.01% 0.274 263.83);
+    /* ... etc ... */
+}
+
+body {
+  font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
+    "Segoe UI Symbol";
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  margin: 0;
+  padding: 2rem;
+  background-color: #f9f9f9;
+}
+
+h1 {
+    font-size: 3.125rem;
+    /* ... etc ... */
+}
+
+/* Estilos del logo */
+.main { /* ... */ }
+.content { /* ... */ }
+.left-side { /* ... */ }
+.right-side { /* ... */ }
+.angular-logo { /* ... */ }
+
+/* Estilos del Chat */
+.chat-container {
+    max-width: 700px; /* Un poco más ancho */
+    height: 500px;
+    border: 1px solid #ccc;
+    display: flex;
+    flex-direction: column;
+    margin: 2rem auto; /* Centrado y con margen */
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+}
+
+.chat-body {
+    flex-grow: 1;
+    overflow-y: auto;
+    padding: 10px;
+    background-color: #ffffff;
+}
+
+.message {
+    margin-bottom: 15px;
+    padding: 10px 15px;
+    border-radius: 18px;
+    max-width: 80%;
+    line-height: 1.5;
+}
+
+.message.user {
+    background-color: rgb(222, 226, 255);
+    text-align: left; /* Cambiado para consistencia */
+    margin-left: auto; /* Alinea a la derecha */
+    border-bottom-right-radius: 4px;
+}
+
+.message.bot {
+    background-color: rgb(255, 250, 205);
+    text-align: left;
+    margin-right: auto; /* Alinea a la izquierda */
+    border-bottom-left-radius: 4px;
+}
+
+.message.bot li {
+  margin-left: 20px;
+}
+
+.chat-footer {
+    padding: 10px;
+    display: flex;
+    border-top: 1px solid #eee;
+    background-color: #fdfdfd;
+}
+
+.chat-footer input {
+    flex-grow: 1;
+    margin-right: 10px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.chat-footer button {
+    padding: 10px 15px;
+    background-color: oklch(69.02% 0.277 332.77);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+.chat-footer button:hover {
+    background-color: oklch(61.42% 0.238 15.34);
+}
+.chat-footer button:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+}
+
