@@ -8,7 +8,7 @@ export const CONFIG = {
       return import.meta.env['VITE_GEMINI_API_KEY'];
     }
     
-    // 2. For development only - replace with your key
-    return 'YOUR_GEMINI_API_KEY_HERE';
+    // 2. No fallback - force environment variable usage
+    throw new Error('VITE_GEMINI_API_KEY environment variable is required');
   }
 };
